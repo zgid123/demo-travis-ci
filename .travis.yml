@@ -25,7 +25,7 @@ after_script:
   - ./cc-test-reporter after-build
 env:
   global:
-    - CC_TEST_REPORTER_ID=31e2972cdf64579da67228f1d9c10a9eee584821d64efc2c48c655e4b56f5ac7
+    - CC_TEST_REPORTER_ID=c1977a02c828284b3adeeae3f1887ed56ae7fd9729d86e7de099ad2908571eea
 notifications:
   email: false
   slack:
@@ -37,3 +37,5 @@ deploy:
   provider: heroku
   app: test-travis-ci
   api_key: ba3d2552-ba7c-42cb-8882-1b7b39fe733d
+
+  
