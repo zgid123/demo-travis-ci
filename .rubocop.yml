@@ -1,0 +1,140 @@
+AllCops:
+  RunRailsCops: true
+  Include:
+    - '**/Gemfile'
+    - '**/Rakefile'
+  Exclude:
+    - 'bin/*'
+    - 'db/seeds.rb'
+    - 'db/schema.rb'
+    - 'vendor/bundle/**/*'
+
+Metrics/ClassLength:
+  Max: 250
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+# !! no warning on double quotes
+Style/StringLiterals:
+  Enabled: false
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/FileName:
+  Enabled: false
+
+Style/NumericLiteralPrefix:
+  Enabled: false
+
+Style/ExtraSpacing:
+  # When true, allows most uses of extra spacing if the intent is to align
+  # things with the previous or next line, not counting empty lines or comment
+  # lines.
+  AllowForAlignment: true
+  # When true, forces the alignment of = in assignments on consecutive lines.
+  ForceEqualSignAlignment: false
+  Enabled: false
+
+Style/AlignParameters:
+  Description: >-
+                 Align the parameters of a method call if they span more
+                 than one line.
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-double-indent'
+  Enabled: false
+
+
+Style/SpaceBeforeComma:
+  Description: 'No spaces before commas.'
+  Enabled: false
+
+Style/TrivialAccessors:
+  # When set to false the cop will suggest the use of accessor methods
+  # in situations like:
+  #
+  # def name
+  #   @other_name
+  # end
+  #
+  # This way you can uncover "hidden" attributes in your code.
+  ExactNameMatch: true
+  AllowPredicates: true
+  # Allows trivial writers that don't end in an equal sign. e.g.
+  #
+  # def on_exception(action)
+  #   @on_exception=action
+  # end
+  # on_exception :restart
+  #
+  # Commonly used in DSLs
+  AllowDSLWriters: true
+
+# — END Nuxos Asia Defaults
+
+Metrics/AbcSize:
+  Max: 200
+
+Metrics/BlockNesting:
+  Max: 4
+
+Metrics/CyclomaticComplexity:
+  Max: 50
+
+# NOTE: We deliberately use the old syntax, and we're happy with it
+Style/Lambda:
+  Enabled: false
+
+# NOTE: we need braces in case of method({}, {})
+Style/BracesAroundHashParameters:
+  Enabled: false
+
+# Configuration parameters: AllowURI, URISchemes.
+Metrics/LineLength:
+  Max: 200
+
+# Configuration parameters: CountComments.
+Metrics/MethodLength:
+  Max: 100
+
+Metrics/PerceivedComplexity:
+  Max: 50
+
+# NOTE: use editor to generate class template later
+Style/Documentation:
+  Enabled: false
+
+# NOTE: case statement must has else statement even if it's empty
+Style/EmptyElse:
+  Enabled: false
+
+# Configuration parameters: MinBodyLength.
+# NOTE: guard clause is ugly
+Style/GuardClause:
+  Enabled: false
+
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+
+# NOTE: We deliberately use the old syntax, and we're happy with it
+Style/PercentLiteralDelimiters:
+  Enabled: false
+
+# NOTE: We deliberately use the old syntax, and we're happy with it
+Style/RescueModifier:
+  Enabled: false
+
+# Cop supports --auto-correct.
+# Configuration parameters: AllowAsExpressionSeparator.
+# NOTE: We deliberately use the old syntax, and we're happy with it
+Style/Semicolon:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/RaiseArgs:
+  EnforcedStyle: compact
+
+AllCops:
+  TargetRubyVersion: 2.3

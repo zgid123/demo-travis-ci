@@ -1,0 +1,39 @@
+language: ruby
+gemfile:
+  - gemfiles/rails_4.2.0.gemfile
+rvm:
+  - 2.4.2
+before_install:
+  - gem update bundler
+  - gem update --system
+matrix:
+  include:
+    - rvm: 2.4.2
+      gemfile: gemfiles/rails_5.0.0.gemfile
+services:
+  - postgresql
+script:
+  - bundle install
+  - bundle exec rspec
+before_script:
+  - psql -c 'create database test_travis_ci_test;' -U postgres
+  - cp config/database.yml.sample config/database.yml
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+after_script:
+  - ./cc-test-reporter after-build
+env:
+  global:
+    - CC_TEST_REPORTER_ID=31e2972cdf64579da67228f1d9c10a9eee584821d64efc2c48c655e4b56f5ac7
+notifications:
+  email: false
+  slack:
+    on_success: always
+    on_failure: always
+    rooms:
+      - lthd2017:zu5gE0CGIxEv3CI2CdHZRJzH#travis-ci
+deploy:
+  provider: heroku
+  app: test-travis-ci
+  api_key: ba3d2552-ba7c-42cb-8882-1b7b39fe733d

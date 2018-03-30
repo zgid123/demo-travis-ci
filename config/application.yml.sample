@@ -1,0 +1,29 @@
+# Add account credentials and API keys here.
+# See http://railsapps.github.io/rails-environment-variables.html
+# This file should be listed in .gitignore to keep your settings secret!
+# Each entry sets a local environment variable.
+# For example, setting:
+# GMAIL_USERNAME: Your_Gmail_Username
+# makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
+
+# Add configuration values here, as shown below.
+#
+# pusher_app_id: "2954"
+# pusher_key: 7381a978f7dd7f9a1117
+# pusher_secret: abdc3b896a0ffb85d373
+# stripe_api_key: sk_test_2J0l093xOyW72XUYJHE4Dv2r
+# stripe_publishable_key: pk_test_ro9jV5SNwGb1yYlQfzG17LHK
+#
+# production:
+#   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
+#   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
+ROLLBAR_ACCESS_TOKEN: b6ee2eb007644e8aa20a41de39233cc9
+NEW_RELIC_LICENSE_KEY: 688e7a71b7ed97443f2064a7ef80501f45ba7d95
+SENTRY_DSN: https://a765b5d3737f4265b20b00d268f26c4f:d50deb14710c4d82ae3efd8a86ec00c9@app.getsentry.com/85449
+GMAIL_USERNAME: golden.owl.test@gmail.com
+GMAIL_PASSWORD: goldenowl2016
+DOMAIN_NAME: goldenowl.asia
+ADMIN_NAME: Admin
+ADMIN_EMAIL: admin@goldenowl.asia
+ADMIN_PASSWORD: 12345678
+BLAZER_DATABASE_URL: postgres://user:password@hostname:5432/database

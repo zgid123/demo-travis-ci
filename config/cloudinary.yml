@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: golden-owl-cloud
+  api_key: '822396743473826'
+  api_secret: uV14E1E6WTYUpjNa_GvrBGQS04Y
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: golden-owl-cloud
+  api_key: '822396743473826'
+  api_secret: uV14E1E6WTYUpjNa_GvrBGQS04Y
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: golden-owl-cloud
+  api_key: '822396743473826'
+  api_secret: uV14E1E6WTYUpjNa_GvrBGQS04Y
+  enhance_image_tag: true
+  static_image_support: false
