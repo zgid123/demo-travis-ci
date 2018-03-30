@@ -46,6 +46,10 @@ class User < ActiveRecord::Base
     role == 'user'
   end
 
+  def full_info
+    "#{email} - #{name} - #{role}"
+  end
+
   def short_info
     "#{email} - #{name}"
   end
