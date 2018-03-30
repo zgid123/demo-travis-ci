@@ -33,8 +33,8 @@ notifications:
     on_failure: always
     rooms:
       - lthd2017:StOlXRKIa5FFK1g7be4gKdFK#travis-ci
-# deploy:
-#   provider: heroku
-#   app: test-travis-ci
-#   api_key: ba3d2552-ba7c-42cb-8882-1b7b39fe733d
+deploy:
+  provider: heroku
+  app: test-travis-ci
+  api_key: ba3d2552-ba7c-42cb-8882-1b7b39fe733d
 
