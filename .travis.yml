@@ -32,7 +32,7 @@ notifications:
     on_success: always
     on_failure: always
     rooms:
-      - lthd2017:zu5gE0CGIxEv3CI2CdHZRJzH#travis-ci
+      - lthd2017:StOlXRKIa5FFK1g7be4gKdFK#travis-ci
 # deploy:
 #   provider: heroku
 #   app: test-travis-ci
