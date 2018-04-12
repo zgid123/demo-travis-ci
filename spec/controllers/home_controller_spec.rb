@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe HomeController, type: :controller do
   let!(:admin) { create(:user, admin: true, name: 'Hihi') }
   let!(:user) { create(:user, admin: false, name: 'Kaka') }
+  let!(:user) { create(:user, admin: false, name: 'lll') }
 
   describe '#index' do
     context 'access to index' do
